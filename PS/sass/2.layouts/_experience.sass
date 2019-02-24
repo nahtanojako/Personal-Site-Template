@@ -1,0 +1,88 @@
+#experience
+  background: $gray
+
+  .exp
+    padding: 3rem 0 3rem 3rem
+    margin-left: 1rem
+    border-left: 3px solid $gray-4
+    position: relative
+    +bp(md)
+      width: 50%
+      margin-left: auto
+
+    &__item
+      margin-bottom: 3rem
+      
+      &:last-child
+        margin-bottom: 0
+
+      &:nth-child(odd) .exp__content,
+      &:nth-child(even) .exp__date
+        +bp(md)
+          position: absolute
+          left: -100%
+          width: calc(100% - 3rem)
+          margin-top: -5rem
+          text-align: right
+
+      &:nth-child(odd)
+        +bp(md)
+          margin-bottom: 10rem
+
+      &:nth-child(even) .exp__date
+        +bp(md)
+          margin-top: 0
+
+        &:before
+          +bp(md)
+            left: calc(100%)
+            border-left-color: $secondary
+            border-right-color: transparent
+
+        .exp__timeline-icon
+          +bp(md)
+            left: calc(100% + 1.8rem)
+
+    &__date
+      background: $secondary
+      display: inline-block
+      color: $white
+      padding: 0.7rem 1.5rem
+      border-radius: 0.7rem
+      text-transform: uppercase
+      margin-bottom: 2rem
+      position: relative
+      &:before
+        +pseudo
+        left: -1rem
+        top: 0.9rem
+        width: 0
+        height: 0
+        border: 0.5rem solid transparent
+        border-right-color: $secondary
+
+    &__content-head,
+    &__content-pos
+      text-transform: uppercase
+      font-weight: 700
+
+    &__content-head
+      color: $gray-9
+      margin: 0
+
+    &__content-pos
+      color: $primary
+
+    &__content-desc
+      margin-top: 1rem
+
+    &__timeline-icon
+      color: $white
+      background: $gray-5
+      display: inline-block
+      +circle(2rem)
+      position: absolute
+      left: -4.1rem
+      top: 0.5rem
+      i
+        +center

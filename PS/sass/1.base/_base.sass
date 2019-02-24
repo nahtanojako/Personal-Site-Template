@@ -1,0 +1,53 @@
+*
+  box-sizing: border-box
+
+*:before,
+*:after
+  box-sizing: inherit
+
+html, body
+  width: 100%
+  height: 100%
+
+body
+  font-family: $sans-serif
+  font-size: 1rem
+  line-height: 1.6
+
+a
+  text-decoration: none
+  +transition(fast)
+
+img,
+video
+  width: 100%
+  vertical-align: middle
+
+h1,h2,h3,h4,h5,h6,a
+  text-transform: uppercase
+
+.section
+  padding: 3rem 0
+
+.section-head-wrap
+  position: relative
+  text-align: center
+  margin-bottom: 6rem
+
+.section-head
+  font-weight: 700
+  margin: 1.5rem 0
+  font-size: 1.8rem
+  color: $gray-8
+  &-icon
+    +center(x)
+    background: $gray-4
+    height: 5px
+    width: 70%
+    box-shadow: inset 0 -1px 0 rgba($black, 0.1), 0 1px 0 rgba($white, 0.7)
+    i
+      +circle(2rem)
+      background: $gray-5
+      +center
+      padding-top: 0.4rem
+      color: $white

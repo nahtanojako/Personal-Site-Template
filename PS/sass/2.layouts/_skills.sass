@@ -1,0 +1,50 @@
+#skills
+  .skills-wrap
+    +flex(row, space-between, center)
+    margin-bottom: 1rem
+  .skills
+    position: relative
+    border: 2px solid $gray-6
+    width: 85%
+    height: 2rem
+    border-radius: 1rem
+    overflow: hidden
+    &__gauge
+      position: absolute
+      top: 0
+      left: 0
+      width: 95%
+      height: 100%
+      background: $primary
+      border-radius: 1rem
+    &__desc
+      color: $white
+      text-transform: uppercase
+      position: absolute
+      +center(y)
+      left: 1rem
+    &__percent
+      color: $gray-6
+      font-weight: 700
+
+  .col-md-6:nth-child(2)
+    .skills__gauge
+      width: 55%
+
+  .col-md-6:nth-child(3)
+    .skills__gauge
+      width: 75%
+
+  .col-md-6:nth-child(4)
+    .skills__gauge
+      width: 90%
+
+  .col-md-6:nth-child(5)
+    .skills__gauge
+      width: 80%
+
+  .col-md-6:nth-child(6)
+    .skills__gauge
+      width: 60%
+
+

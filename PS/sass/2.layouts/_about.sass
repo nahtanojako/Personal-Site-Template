@@ -1,0 +1,63 @@
+#about
+  background: $gray
+  text-align: center
+
+  .about-content
+    +flex(row, space-between, center)
+    flex-wrap: no-wrap
+    margin-top: 2rem
+
+    .about-img
+      order: -1
+      margin-bottom: 1.5rem
+      flex-basis: 100%
+      position: relative
+      +bp(md)
+        order: 2
+        flex-basis: 33.333333%
+
+      img
+        +circle(10rem)
+
+    span
+      display: block
+
+
+    .left-item,
+    .right-item
+      flex-basis: 100%
+      text-align: center
+      +bp(sm)
+        flex-basis: 45%
+      +bp(md)
+        flex-basis: 33.33333%
+
+    .left-item
+      +bp(sm)
+        text-align: right
+      +bp(md)
+        order: 1
+
+    .right-item
+      +bp(sm)
+        text-align: left
+      +bp(md)
+        order: 3
+
+    .about-group
+      margin-bottom: 1.5rem
+
+      .about-label
+        text-transform: uppercase
+        font-weight: 700
+
+      .about-info
+        color: rgba($gray-7, 0.6)
+
+  .about-desc
+    margin: 2rem 0 3rem
+    color: rgba($gray-7, 0.8)
+    max-width: 768px
+    margin-left: auto
+    margin-right: auto
+

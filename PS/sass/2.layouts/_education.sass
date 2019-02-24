@@ -1,0 +1,73 @@
+#education
+  background: darken($gray, 7%)
+
+  .block
+    +bp(lg)
+      +flex(row, center, center)
+
+    &__item
+      margin-bottom: 2rem
+      position: relative
+      +bp(md)
+        +flex(row, center, stretch)
+      +bp(lg)
+        flex-basis: 49.5%
+        margin-bottom: 1%
+
+      &:nth-child(odd)
+        +bp(lg)
+          margin-right: 0.5%
+        &:after
+          +bp(lg)
+            +pseudo
+            +center(y)
+            right: -1.25rem
+            +circle(2rem)
+            background: $primary
+            border: 2px solid darken($primary, 10%)
+            z-index: 99
+
+      &:nth-child(even)
+        +bp(lg)
+          margin-left: 0.5%
+
+      &:nth-child(even) .block__desc
+        +bp(lg)
+          order: -1
+
+    &__head,
+    &__desc
+      padding: 2rem
+      +bp(lg)
+        padding: 1.5rem
+
+
+    &__head
+      background: $primary
+      color: $white
+      +bp(md)
+        flex-basis: 40%
+
+      span
+        display: block
+      .year, 
+      .school
+        text-transform: uppercase
+      .year
+        margin-bottom: 1rem
+
+    .school,
+    .grade
+      font-weight: 700
+      font-size: 1.2rem
+      line-height: 1
+
+
+    &__desc
+      background: $white
+      +bp(md)
+        flex-basis: 60%
+      .desc
+        color: $gray-8
+        margin-top: 1rem
+

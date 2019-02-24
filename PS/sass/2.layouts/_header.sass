@@ -1,0 +1,86 @@
+.main-header
+
+  .profile-img
+    height: 50vh
+    +background(none, profile)
+    +bp(md)
+      height: 90vh
+
+  .row
+    margin: 0
+
+  .col-md-6
+    padding: 0
+
+  .profile
+    background: $primary
+    color: $white
+    padding: 0 1rem 3rem
+    +bp(md)
+      height: 90vh
+      padding-left: 2rem
+      padding-right: 2rem
+    .logo
+      background: $secondary
+      border: 0.4rem solid $white
+      box-shadow: 0 0 1rem rgba($black, 0.3)
+      +circle(10rem)
+      display: block
+      color: $white
+      +center(x)
+      position: relative
+      top: -5rem
+      
+      +bp(md)
+        left: -2rem
+        top: 5%
+      &__text
+        +center
+        text-align: center
+        width: 100%
+        margin-top: -0.5rem
+      &__j,
+      &__g
+        font-size: 4rem
+        font-weight: 700
+        line-height: 1.2
+        letter-spacing: -8px
+      &__g
+        text-transform: lowercase
+        font-size: 4rem
+      &__tagline
+        font-family: $cursive
+        text-transform: capitalize
+        font-size: 1rem
+        display: block
+        width: 100%
+    
+    &__name
+      font-weight: 700
+      line-height: 1
+      margin-top: -2rem
+      letter-spacing: 1px
+      font-family: 'abel regular', sans-serif
+      font-size: 2.3rem
+      +bp(md)
+        margin-top: 3rem
+
+    &__pos
+      font-family: $cursive
+      font-size: 1.5rem
+      color: rgba($white, 0.7)
+    &__desc
+      margin: 3rem 0
+      color: rgba($white, 0.7)
+    .dots
+      .dot
+        +circle(13px)
+        display: inline-block
+        background: transparent
+        border: 2px solid $secondary
+        margin: 0 2px
+        cursor: pointer
+        +transition(fast)
+        &.active,
+        &:hover
+          background: $secondary

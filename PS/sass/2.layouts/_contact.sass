@@ -1,0 +1,57 @@
+.social-media
+  background: $gray
+  padding: 2rem 0
+  text-align: center
+
+  .row
+    align-items: center
+
+  .social-desc
+    text-transform: uppercase
+    font-weight: 700
+    font-size: 1.5rem
+    margin: 0
+    +bp(md)
+      text-align: left
+
+  ul
+    text-align: center
+    margin-top: 1rem
+    +bp(md)
+      text-align: right
+      margin-top: 0
+    li
+      display: inline-block
+      margin: 0 0.25rem
+      a
+        display: block
+        padding: 1rem
+        position: relative
+        +circle(2.5rem)
+        background: $primary
+        border: 1px solid transparent
+        &:hover
+          border-color: $primary
+          background: transparent
+          & i
+            color: $primary
+        i
+          +center
+          color: $white
+
+.contact-form
+  background: $secondary
+  .container
+    max-width: 768px
+  .form-control
+    background: transparent
+    color: $white
+
+  .btn
+    text-align: center
+
+
+.google-map
+  height: 300px
+  background: $gray
+  +flex(row, center, center)

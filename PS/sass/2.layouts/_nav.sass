@@ -1,0 +1,101 @@
+.navbar 
+  &__collapse
+    position: fixed
+    top: 0
+    right: 0
+    width: 100%
+    text-align: center
+    background: $secondary
+    height: 100%
+    z-index: $top
+    +transform(translateX(100%))
+    +transition(fast)
+    &.show
+      +transform(translateX(0))
+    &.fixed
+      +bp(md)
+        transition: none
+        position: fixed
+        width: 100%
+        top: 0
+        left: 0
+        box-shadow: 0 2px 5px rgba($black, 0.1)
+    +bp(md)
+      +transform(translateX(0))
+      height: auto
+      top: 90%
+      background: $white
+      +flex(row, center, center)
+      padding: 0.5rem 0
+      position: static
+
+    #btn-close
+      position: absolute
+      top: 1rem
+      right: 1rem
+      height: 1.8rem
+      width: 1.8rem
+      cursor: pointer
+      +transition(fast)
+      +bp(md)
+        display: none
+      &:hover:before,
+      &:hover:after
+        background: $primary
+      &:before,
+      &:after
+        +pseudo
+        background: $gray-5
+        width: 100%
+        height: 4px
+        border-radius: 4px
+        top: 0.8rem
+      &:before
+        +transform(rotate(45deg))
+      &:after
+        +transform(rotate(-45deg))
+
+    li:nth-child(2)
+      padding-top: 5rem
+      +bp(md)
+        padding-top: 0
+
+    li.active a
+      color: $primary
+
+    a
+      color: $gray-5
+      display: block
+      padding: 0.5rem
+      font-weight: 700
+      +bp(md)
+        color: $gray-6
+        font-size: 0.9rem
+        padding-left: 0.7rem
+        padding-right: 0.7rem
+      &:hover
+        color: $white
+        +bp(md)
+          color: $black
+
+  &__toggler
+    width: 1.8rem
+    height: 20px
+    position: fixed
+    top: 1rem
+    right: 1rem
+    cursor: pointer
+    z-index: 999
+    +bp(md)
+      display: none
+    &:hover .navbar__toggler-icon
+      background: $primary
+      box-shadow: 0 8px 0 $primary, 0 16px 0 $primary
+
+    &-icon
+      width: 100%
+      height: 4px
+      background: $secondary
+      border-radius: 4px
+      box-shadow: 0 8px 0 $secondary, 0 16px 0 $secondary
+      +transition(fast)
